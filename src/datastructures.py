@@ -12,7 +12,7 @@ class FamilyStructure:
     def __init__(self, last_name):
         self.last_name = last_name
 
-        # example list of members********************************************************
+        # example list of members
         self._members = [
            { "id" : self._generateId(),
             "first_name" : "John",
@@ -37,7 +37,7 @@ class FamilyStructure:
         return randint(0, 99999999)
     
     def add_member(self, member):
-        # fill this method and update the return********************************************************
+        # fill this method and update the return
         self._members.append(member)
         
         return None
@@ -53,12 +53,12 @@ class FamilyStructure:
             return None
 
     def get_member(self, id):
-        # fill this method and update the return*******************************************************
+        # fill this method and update the return
         for i in self._members:
             if i["id"] == int(id):
                 return i
         
 
-    # this method is done, it returns a list with all the family members********************************
+    # this method is done, it returns a list with all the family members
     def get_all_members(self):
         return self._members

@@ -42,7 +42,6 @@ def test_add_empty_reponse_body(client):
 	})
     assert response.data != b""
 
-# GET GET GET MEMBERS***************************************************************************************
 @pytest.mark.it("Implement method GET /members")
 def test_get_members_exist(client):
     response = client.get('/members')
@@ -91,7 +90,6 @@ def test_get_first_member_tommy(client):
     assert "first_name" in data
     assert data["first_name"] == "Tommy"
 
-# DELETE MEMBERS**************************************************************************************
 @pytest.mark.it("Implement method DELETE /member/<int:id> to delete a family member")
 def test_delete_member(client):
     response = client.delete('/member/3443')
